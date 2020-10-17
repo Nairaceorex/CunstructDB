@@ -52,7 +52,7 @@ namespace CunstructDB.Migrations
                 {
                     ID = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FullName = table.Column<long>(nullable: false),
+                    FullName = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     Phone = table.Column<string>(nullable: true),
                     PassportData = table.Column<string>(nullable: true),

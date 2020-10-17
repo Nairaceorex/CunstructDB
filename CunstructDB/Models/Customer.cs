@@ -11,7 +11,7 @@ namespace ConstructDB.Models
     {
         public long ID { get; set; }
         [Display(Name = "ФИО")]
-        public long FullName { get; set; }
+        public string FullName { get; set; }
         [Display(Name = "Адресс")]
         public string Address { get; set; }
         [Display(Name = "Телефон")]

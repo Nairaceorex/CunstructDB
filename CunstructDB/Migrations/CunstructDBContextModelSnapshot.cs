@@ -55,8 +55,8 @@ namespace CunstructDB.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("FullName")
-                        .HasColumnType("bigint");
+                    b.Property<string>("FullName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("OrderID")
                         .HasColumnType("bigint");
