@@ -18,10 +18,13 @@ namespace ConstructDB.Models
         [Display(Name = "Цена")]
         public string Price { get; set; }
         [Display(Name = "ID_Материал1")]
-        public DbSet<Material> Material1ID { get; set; }
+        public long? Material1ID { get; set; }
+        public DbSet<Material> Material1 { get; set; }
         [Display(Name = "ID_Материал2")]
-        public DbSet<Material> Material2ID { get; set; }
+        public long? Material2ID { get; set; }
+        public DbSet<Material> Material2 { get; set; }
         [Display(Name = "ID_Материал3")]
-        public DbSet<Material> Material3ID { get; set; }
+        public long? Material3ID { get; set; }
+        public DbSet<Material> Material3 { get; set; }
     }
 }

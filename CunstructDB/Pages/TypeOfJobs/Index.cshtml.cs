@@ -20,10 +20,12 @@ namespace CunstructDB.Pages.TypeOfJobs
         }
 
         public IList<TypeOfJob> TypeOfJob { get;set; }
+        public IList<Material> Material { get; set; }
 
         public async Task OnGetAsync()
         {
             TypeOfJob = await _context.TypeOfJob.ToListAsync();
+            Material = await _context.Material.ToListAsync();
         }
     }
 }

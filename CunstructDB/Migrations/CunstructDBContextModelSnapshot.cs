@@ -29,6 +29,15 @@ namespace CunstructDB.Migrations
                     b.Property<long?>("OrderID")
                         .HasColumnType("bigint");
 
+                    b.Property<long?>("Staff1")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("Staff2")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("Staff3")
+                        .HasColumnType("bigint");
+
                     b.HasKey("ID");
 
                     b.HasIndex("OrderID");
@@ -220,6 +229,15 @@ namespace CunstructDB.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long?>("Material1ID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("Material2ID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("Material3ID")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -253,15 +271,15 @@ namespace CunstructDB.Migrations
             modelBuilder.Entity("ConstructDB.Models.Material", b =>
                 {
                     b.HasOne("ConstructDB.Models.TypeOfJob", null)
-                        .WithMany("Material1ID")
+                        .WithMany("Material1")
                         .HasForeignKey("TypeOfJobID");
 
                     b.HasOne("ConstructDB.Models.TypeOfJob", null)
-                        .WithMany("Material2ID")
+                        .WithMany("Material2")
                         .HasForeignKey("TypeOfJobID1");
 
                     b.HasOne("ConstructDB.Models.TypeOfJob", null)
-                        .WithMany("Material3ID")
+                        .WithMany("Material3")
                         .HasForeignKey("TypeOfJobID2");
                 });
 
