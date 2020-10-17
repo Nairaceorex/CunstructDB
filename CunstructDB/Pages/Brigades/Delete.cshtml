@@ -1,0 +1,22 @@
+﻿@page
+@model CunstructDB.Pages.Brigades.DeleteModel
+
+@{
+    ViewData["Title"] = "Удалить";
+}
+
+<h1>Удалить</h1>
+
+<h3>Вы уверены, что хотите удалить?</h3>
+<div>
+    <h4>Бригада</h4>
+    <hr />
+    <dl class="row">
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Brigade.ID" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться назад</a>
+    </form>
+</div>

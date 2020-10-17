@@ -1,0 +1,30 @@
+﻿@page
+@model CunstructDB.Pages.Brigades.IndexModel
+
+@{
+    ViewData["Title"] = "Бригады";
+}
+
+<h1>Бригады</h1>
+
+<p>
+    <a asp-page="Create">Добавить бригаду</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Brigade) {
+        <tr>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Редактировать</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Подробнее</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
