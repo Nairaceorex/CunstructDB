@@ -123,8 +123,14 @@ namespace CunstructDB.Migrations
                     b.Property<string>("AboutPayment")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long?>("BrigadeID")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("CompletionMark")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("CustomerID")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
@@ -132,8 +138,14 @@ namespace CunstructDB.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
+                    b.Property<long?>("StaffID")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<long?>("TypeOfJobID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ID");
 
@@ -260,14 +272,14 @@ namespace CunstructDB.Migrations
             modelBuilder.Entity("ConstructDB.Models.Brigade", b =>
                 {
                     b.HasOne("ConstructDB.Models.Order", null)
-                        .WithMany("BrigadeID")
+                        .WithMany("Brigade")
                         .HasForeignKey("OrderID");
                 });
 
             modelBuilder.Entity("ConstructDB.Models.Customer", b =>
                 {
                     b.HasOne("ConstructDB.Models.Order", null)
-                        .WithMany("CustomerID")
+                        .WithMany("Customer")
                         .HasForeignKey("OrderID");
                 });
 
@@ -308,14 +320,14 @@ namespace CunstructDB.Migrations
                         .HasForeignKey("BrigadeID2");
 
                     b.HasOne("ConstructDB.Models.Order", null)
-                        .WithMany("StaffID")
+                        .WithMany("Staff")
                         .HasForeignKey("OrderID");
                 });
 
             modelBuilder.Entity("ConstructDB.Models.TypeOfJob", b =>
                 {
                     b.HasOne("ConstructDB.Models.Order", null)
-                        .WithMany("TypeOfJobID")
+                        .WithMany("TypeOfJob")
                         .HasForeignKey("OrderID");
                 });
 #pragma warning restore 612, 618

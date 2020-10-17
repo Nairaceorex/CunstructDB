@@ -17,7 +17,11 @@ namespace CunstructDB.Migrations
                     StartDate = table.Column<DateTime>(nullable: false),
                     EndDate = table.Column<DateTime>(nullable: false),
                     CompletionMark = table.Column<string>(nullable: true),
-                    AboutPayment = table.Column<string>(nullable: true)
+                    AboutPayment = table.Column<string>(nullable: true),
+                    CustomerID = table.Column<long>(nullable: true),
+                    TypeOfJobID = table.Column<long>(nullable: true),
+                    BrigadeID = table.Column<long>(nullable: true),
+                    StaffID = table.Column<long>(nullable: true)
                 },
                 constraints: table =>
                 {

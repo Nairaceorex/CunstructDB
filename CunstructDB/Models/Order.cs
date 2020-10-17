@@ -23,12 +23,16 @@ namespace ConstructDB.Models
         [Display(Name = "Об оплате")]
         public string AboutPayment { get; set; }
         [Display(Name = "ID_Заказчик")]
-        public DbSet<Customer> CustomerID { get; set; }
+        public long? CustomerID { get; set; }
+        public DbSet<Customer> Customer { get; set; }
         [Display(Name = "ID_Вид работы")]
-        public DbSet<TypeOfJob> TypeOfJobID { get; set; }
+        public long? TypeOfJobID { get; set; }
+        public DbSet<TypeOfJob> TypeOfJob { get; set; }
         [Display(Name = "ID_Бригада")]
-        public DbSet<Brigade> BrigadeID { get; set; }
+        public long? BrigadeID { get; set; }
+        public DbSet<Brigade> Brigade { get; set; }
         [Display(Name = "ID_Сотрудник")]
-        public DbSet<Staff> StaffID { get; set; }
+        public long? StaffID { get; set; }
+        public DbSet<Staff> Staff { get; set; }
     }
 }
