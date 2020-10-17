@@ -20,10 +20,12 @@ namespace CunstructDB.Pages.Brigades
         }
 
         public IList<Brigade> Brigade { get;set; }
+        public IList<Staff> Staff { get; set; }
 
         public async Task OnGetAsync()
         {
             Brigade = await _context.Brigade.ToListAsync();
+            Staff = await _context.Staff.ToListAsync();
         }
     }
 }

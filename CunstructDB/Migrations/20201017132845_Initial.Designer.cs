@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CunstructDB.Migrations
 {
     [DbContext(typeof(CunstructDBContext))]
-    [Migration("20201017115044_Initial")]
+    [Migration("20201017132845_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,13 +31,13 @@ namespace CunstructDB.Migrations
                     b.Property<long?>("OrderID")
                         .HasColumnType("bigint");
 
-                    b.Property<long?>("Staff1")
+                    b.Property<long?>("Staff1ID")
                         .HasColumnType("bigint");
 
-                    b.Property<long?>("Staff2")
+                    b.Property<long?>("Staff2ID")
                         .HasColumnType("bigint");
 
-                    b.Property<long?>("Staff3")
+                    b.Property<long?>("Staff3ID")
                         .HasColumnType("bigint");
 
                     b.HasKey("ID");
@@ -295,15 +295,15 @@ namespace CunstructDB.Migrations
             modelBuilder.Entity("ConstructDB.Models.Staff", b =>
                 {
                     b.HasOne("ConstructDB.Models.Brigade", null)
-                        .WithMany("Staff1ID")
+                        .WithMany("Staff1")
                         .HasForeignKey("BrigadeID");
 
                     b.HasOne("ConstructDB.Models.Brigade", null)
-                        .WithMany("Staff2ID")
+                        .WithMany("Staff2")
                         .HasForeignKey("BrigadeID1");
 
                     b.HasOne("ConstructDB.Models.Brigade", null)
-                        .WithMany("Staff3ID")
+                        .WithMany("Staff3")
                         .HasForeignKey("BrigadeID2");
 
                     b.HasOne("ConstructDB.Models.Order", null)

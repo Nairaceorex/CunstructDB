@@ -30,9 +30,9 @@ namespace CunstructDB.Migrations
                 {
                     ID = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Staff1 = table.Column<long>(nullable: true),
-                    Staff2 = table.Column<long>(nullable: true),
-                    Staff3 = table.Column<long>(nullable: true),
+                    Staff1ID = table.Column<long>(nullable: true),
+                    Staff2ID = table.Column<long>(nullable: true),
+                    Staff3ID = table.Column<long>(nullable: true),
                     OrderID = table.Column<long>(nullable: true)
                 },
                 constraints: table =>
