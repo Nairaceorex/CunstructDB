@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CunstructDB.Migrations
 {
     [DbContext(typeof(CunstructDBContext))]
-    [Migration("20201017132845_Initial")]
+    [Migration("20201017160153_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -205,6 +205,9 @@ namespace CunstructDB.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long?>("PositionID")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Sex")
                         .HasColumnType("nvarchar(max)");
 
@@ -288,7 +291,7 @@ namespace CunstructDB.Migrations
             modelBuilder.Entity("ConstructDB.Models.Position", b =>
                 {
                     b.HasOne("ConstructDB.Models.Staff", null)
-                        .WithMany("PositionID")
+                        .WithMany("Position")
                         .HasForeignKey("StaffID");
                 });
 

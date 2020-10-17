@@ -203,6 +203,9 @@ namespace CunstructDB.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long?>("PositionID")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Sex")
                         .HasColumnType("nvarchar(max)");
 
@@ -286,7 +289,7 @@ namespace CunstructDB.Migrations
             modelBuilder.Entity("ConstructDB.Models.Position", b =>
                 {
                     b.HasOne("ConstructDB.Models.Staff", null)
-                        .WithMany("PositionID")
+                        .WithMany("Position")
                         .HasForeignKey("StaffID");
                 });
 

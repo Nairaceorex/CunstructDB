@@ -25,6 +25,7 @@ namespace ConstructDB.Models
         [Display(Name = "Паспортные данные")]
         public string PassportData { get; set; }
         [Display(Name = "ID_Должности")]
-        public DbSet<Position> PositionID { get; set; }
+        public long? PositionID { get; set; }
+        public DbSet<Position> Position { get; set; }
     }
 }

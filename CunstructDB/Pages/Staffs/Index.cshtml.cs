@@ -20,10 +20,12 @@ namespace CunstructDB.Pages.Staffs
         }
 
         public IList<Staff> Staff { get;set; }
+        public IList<Position> Position { get; set; }
 
         public async Task OnGetAsync()
         {
             Staff = await _context.Staff.ToListAsync();
+            Position = await _context.Position.ToListAsync();
         }
     }
 }

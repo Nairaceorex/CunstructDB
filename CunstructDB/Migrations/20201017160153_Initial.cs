@@ -106,6 +106,7 @@ namespace CunstructDB.Migrations
                     Address = table.Column<string>(nullable: true),
                     Phone = table.Column<string>(nullable: true),
                     PassportData = table.Column<string>(nullable: true),
+                    PositionID = table.Column<long>(nullable: true),
                     BrigadeID = table.Column<long>(nullable: true),
                     BrigadeID1 = table.Column<long>(nullable: true),
                     BrigadeID2 = table.Column<long>(nullable: true),
