@@ -20,7 +20,7 @@ namespace CunstructDB.Pages.Orders
         }
 
         public IList<Order> Order { get;set; }
-//
+
         public async Task OnGetAsync()
         {
             Order = await _context.Order.ToListAsync();
