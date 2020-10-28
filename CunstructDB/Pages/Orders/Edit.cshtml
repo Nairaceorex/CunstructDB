@@ -40,6 +40,26 @@
                 <span asp-validation-for="Order.AboutPayment" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Order.CustomerID" class="control-label"></label>
+                <input asp-for="Order.CustomerID" class="form-control" />
+                <span asp-validation-for="Order.CustomerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.TypeOfJobID" class="control-label"></label>
+                <input asp-for="Order.TypeOfJobID" class="form-control" />
+                <span asp-validation-for="Order.TypeOfJobID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.BrigadeID" class="control-label"></label>
+                <input asp-for="Order.BrigadeID" class="form-control" />
+                <span asp-validation-for="Order.BrigadeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.StaffID" class="control-label"></label>
+                <input asp-for="Order.StaffID" class="form-control" />
+                <span asp-validation-for="Order.StaffID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Добавить" class="btn btn-primary" />
             </div>
         </form>
