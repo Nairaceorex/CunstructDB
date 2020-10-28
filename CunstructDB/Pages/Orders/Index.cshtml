@@ -28,7 +28,18 @@
             <th>
                 @Html.DisplayNameFor(model => model.Order[0].AboutPayment)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].TypeOfJob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Brigade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Staff)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -48,6 +59,60 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AboutPayment)
+            </td>
+            <td>
+                @{
+                    try
+                    {
+                        @Model.Customer.First(M => M.ID == item.CustomerID).FullName
+                    }
+                    catch
+                    {
+                        <p>нет</p>
+                    }
+                }
+
+            </td>
+            <td>
+                @{
+                    try
+                    {
+                        @Model.TypeOfJob.First(M => M.ID == item.TypeOfJobID).Name
+                    }
+                    catch
+                    {
+                        <p>нет</p>
+                    }
+                }
+
+            </td>
+            <td>
+                @{
+                    try
+                    {
+                        @Model.Brigade.First(M => M.ID == item.BrigadeID).Staff1ID
+                        @Model.Brigade.First(M => M.ID == item.BrigadeID).Staff2ID
+                        @Model.Brigade.First(M => M.ID == item.BrigadeID).Staff3ID
+                    }
+                    catch
+                    {
+                        <p>нет</p>
+                    }
+                }
+
+            </td>
+            <td>
+                @{
+                    try
+                    {
+                        @Model.Staff.First(M => M.ID == item.StaffID).FullName
+                    }
+                    catch
+                    {
+                        <p>нет</p>
+                    }
+                }
+
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Редактировать</a> |
